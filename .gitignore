@@ -1,0 +1,7 @@
+# Datos de engagement: nunca al repo
+/skopos.json
+/scope.txt
+/out/
+/skopos
+*.xml
+!testdata/*.xml

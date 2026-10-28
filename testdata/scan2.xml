@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX scan2.xml 192.0.2.0/28">
+  <host>
+    <status state="up"/>
+    <address addr="192.0.2.10" addrtype="ipv4"/>
+    <hostnames><hostname name="vpn.example.com" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="9.6"/></port>
+      <port protocol="tcp" portid="8080"><state state="open"/><service name="http-proxy" product="Jetty" version="9.4"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="up"/>
+    <address addr="192.0.2.11" addrtype="ipv4"/>
+    <hostnames><hostname name="www.example.com" type="user"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="Apache httpd" version="2.4.57"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="up"/>
+    <address addr="192.0.2.12" addrtype="ipv4"/>
+    <hostnames><hostname name="mail.example.com" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="25"><state state="open"/><service name="smtp" product="Postfix smtpd"/></port>
+      <port protocol="tcp" portid="993"><state state="open"/><service name="imaps"/></port>
+    </ports>
+  </host>
+</nmaprun>

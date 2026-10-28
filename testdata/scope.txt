@@ -1,0 +1,4 @@
+# Scope de ejemplo (rangos reservados para documentación)
+192.0.2.0/28
+example.com
+*.example.com

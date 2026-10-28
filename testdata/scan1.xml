@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX scan1.xml 192.0.2.0/28 203.0.113.50">
+  <host>
+    <status state="up"/>
+    <address addr="192.0.2.10" addrtype="ipv4"/>
+    <hostnames><hostname name="vpn.example.com" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="8.9"/></port>
+      <port protocol="tcp" portid="443"><state state="open"/><service name="https" product="nginx" version="1.24.0"/></port>
+      <port protocol="tcp" portid="3389"><state state="closed"/><service name="ms-wbt-server"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="up"/>
+    <address addr="192.0.2.11" addrtype="ipv4"/>
+    <hostnames><hostname name="www.example.com" type="user"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="Apache httpd" version="2.4.57"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="up"/>
+    <address addr="203.0.113.50" addrtype="ipv4"/>
+    <ports>
+      <port protocol="tcp" portid="3306"><state state="open"/><service name="mysql" product="MySQL" version="8.0"/></port>
+    </ports>
+  </host>
+  <host>
+    <status state="down"/>
+    <address addr="192.0.2.12" addrtype="ipv4"/>
+  </host>
+</nmaprun>
