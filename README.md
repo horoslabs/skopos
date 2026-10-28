@@ -61,3 +61,7 @@ go test ./...
 - Check de DNS y correo (SPF/DKIM/DMARC) y subdominios huérfanos.
 - Notas por activo y etiquetas (en scope, crítico, validado).
 - Exportar al formato de hallazgos de Hacksolo.
+
+## License
+
+[MIT](LICENSE)
